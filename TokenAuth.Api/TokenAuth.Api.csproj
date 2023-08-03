@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<AssemblyName>Rugal.$(MSBuildProjectName)</AssemblyName>
+		<RootNamespace>Rugal.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+
+
+		<AssemblyVersion>1.0.0</AssemblyVersion>
+		<FileVersion>$(AssemblyVersion)</FileVersion>
+		<Version>$(AssemblyVersion)</Version>
+
+
+	</PropertyGroup>
+
+</Project>

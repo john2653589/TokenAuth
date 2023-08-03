@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokenAuth.Mvc", "TokenAuth.Mvc\TokenAuth.Mvc.csproj", "{B59E8D57-BD21-4B5D-AFA9-6FAF2DE103F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokenAuth.Api", "TokenAuth.Api\TokenAuth.Api.csproj", "{A0D54F2A-2DF6-4DD5-99C3-753043634EBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenAuth.Core", "TokenAuth.Core\TokenAuth.Core.csproj", "{7A0996DA-BD3E-4BB7-A3D2-39002B6825AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B59E8D57-BD21-4B5D-AFA9-6FAF2DE103F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B59E8D57-BD21-4B5D-AFA9-6FAF2DE103F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B59E8D57-BD21-4B5D-AFA9-6FAF2DE103F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B59E8D57-BD21-4B5D-AFA9-6FAF2DE103F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0D54F2A-2DF6-4DD5-99C3-753043634EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0D54F2A-2DF6-4DD5-99C3-753043634EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0D54F2A-2DF6-4DD5-99C3-753043634EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0D54F2A-2DF6-4DD5-99C3-753043634EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A0996DA-BD3E-4BB7-A3D2-39002B6825AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A0996DA-BD3E-4BB7-A3D2-39002B6825AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A0996DA-BD3E-4BB7-A3D2-39002B6825AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A0996DA-BD3E-4BB7-A3D2-39002B6825AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D52B8F03-96A4-4C68-A613-9E7698A21D46}
+	EndGlobalSection
+EndGlobal
