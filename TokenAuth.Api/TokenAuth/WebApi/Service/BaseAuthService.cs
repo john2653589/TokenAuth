@@ -157,7 +157,7 @@ namespace Rugal.TokenAuth.WebApi.Service
                 return false;
 
             _ = UserManager.AccessFailedAsync(User).Result;
-            if (User.AccessFailedCount < AuthServerSetting.AccountLockForPasswordError)
+            if (User.AccessFailedCount < AuthServerSetting.AccountLockForAuthError)
                 return false;
 
             ResetErrorCount(User);
@@ -232,14 +232,14 @@ namespace Rugal.TokenAuth.WebApi.Service
             if (string.IsNullOrWhiteSpace(ResetToken))
                 return AuthResultModel.Error("ResetToken cannot be null or empty");
 
-            if (Model.IsLastPasswordHashSameCheck)
+            if (Model.IsLastHashSameCheck)
             {
                 var Hasher = UserManager.PasswordHasher;
-                var LastPassworHash = GetLastHashRecord(User, Model.IsLastPasswordHashSameCount);
+                var LastPassworHash = GetLastHashRecord(User, Model.IsLastHashSameCount);
                 var IsSameOne = LastPassworHash
                     .Any(Item => Hasher.VerifyHashedPassword(User, Item, Model.Password) == PasswordVerificationResult.Success);
                 if (IsSameOne)
-                    return AuthResultModel.Error($"密碼不得與前「{Model.IsLastPasswordHashSameCount}」次密碼一樣");
+                    return AuthResultModel.Error($"密碼不得與前「{Model.IsLastHashSameCount}」次密碼一樣");
             }
 
             if (Model.IsIgnoreRequire)

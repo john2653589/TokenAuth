@@ -28,8 +28,8 @@ namespace Rugal.TokenAuth.WebApi.Model
         public bool IsIgnoreRequire { get; set; }
         public bool IsIgnoreToken { get; set; }
         public bool IsResetUserName { get; set; }
-        public bool IsLastPasswordHashSameCheck { get; set; }
-        public int IsLastPasswordHashSameCount { get; set; } = 3;
+        public bool IsLastHashSameCheck { get; set; }
+        public int IsLastHashSameCount { get; set; } = 3;
     }
 
     public enum ResetByType

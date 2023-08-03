@@ -40,9 +40,9 @@
         Success = 1,
         NoUser = 2,
         AccountLock = 3,
-        PasswordErorr = 4,
+        AuthErorr = 4,
         AdServerError = 5,
-        PasswordErorrAndLock = 6,
+        AuthErorrAndLock = 6,
         Other = 99,
     }
 }

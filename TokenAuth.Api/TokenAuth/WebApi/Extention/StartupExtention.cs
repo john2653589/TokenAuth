@@ -26,22 +26,25 @@ namespace Rugal.TokenAuth.WebApi.Extention
             }).AddEntityFrameworkStores<AuthDbContext>()
             .AddDefaultTokenProviders();
 
-            if (Setting.PasswordResetTokenLifetime is not null)
+            if (Setting.AuthResetTokenLifetime is not null)
             {
                 Services.Configure<DataProtectionTokenProviderOptions>(Options =>
                 {
-                    Options.TokenLifespan = Setting.PasswordResetTokenLifetime.Value;
+                    Options.TokenLifespan = Setting.AuthResetTokenLifetime.Value;
                 });
             }
 
             var AuthServerSection = Configuration.GetSection("AuthServer");
-            var DoubleEncodeKey = AuthServerSection?.GetValue<string>("DoubleEncodeKey");
-            if (DoubleEncodeKey is not null)
-                Setting.DoubleEncodeKey = DoubleEncodeKey;
+            if (AuthServerSection is not null)
+            {
+                var DoubleEncodeKey = AuthServerSection["DoubleEncodeKey"];
+                if (DoubleEncodeKey is not null)
+                    Setting.DoubleEncodeKey = DoubleEncodeKey;
 
-            var DoubleEncodeIV = AuthServerSection?.GetValue<string>("DoubleEncodeIV");
-            if (DoubleEncodeIV is not null)
-                Setting.DoubleEncodeIV = DoubleEncodeIV;
+                var DoubleEncodeIV = AuthServerSection["DoubleEncodeIV"];
+                if (DoubleEncodeIV is not null)
+                    Setting.DoubleEncodeIV = DoubleEncodeIV;
+            }
 
             return Services;
         }

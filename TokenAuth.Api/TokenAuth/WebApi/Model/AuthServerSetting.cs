@@ -8,8 +8,8 @@
         public bool RequireDigit { get; set; }
         public int RequiredLength { get; set; }
         public bool RequireConfirmedAccount { get; set; }
-        public int AccountLockForPasswordError { get; set; }
-        public TimeSpan? PasswordResetTokenLifetime { get; set; }
+        public int AccountLockForAuthError { get; set; }
+        public TimeSpan? AuthResetTokenLifetime { get; set; }
         public bool IsDoubleEncodeHash { get; set; }
         public DoubleEncodeAlgoType DoubleEncodeAlgo { get; set; }
         public string DoubleEncodeKey { get; set; }
